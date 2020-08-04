@@ -15,7 +15,7 @@
   run:
    steps:
      - name: go
-       uses: uses: Secbyte/dotnet-sonarscanner@v2.3
+       uses: Secbyte/dotnet-sonarscanner@v2.3
        with:
         - buildCommand: dotnet build
         - testCommand: dotnet test
