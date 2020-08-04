@@ -13,6 +13,7 @@
   
  jobs:
   run:
+   runs-on: windows-latest
    steps:
      - name: go
        uses: Secbyte/dotnet-sonarscanner@v2.3
