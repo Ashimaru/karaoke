@@ -5,14 +5,17 @@
     branches: [ master ]
   pull_request:
     branches: [ master ]
- 
- uses: Secbyte/dotnet-sonarscanner@v2.3
- with:
-  - buildCommand: dotnet build
-  - testCommand: dotnet test
-  - projectKey: Ashimaru_karaoke
-  - projectName: karaoke
-  - sonarOrganisation: ashimaru
+
  env:
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+ jobs:
+  run:
+  uses: Secbyte/dotnet-sonarscanner@v2.3
+   with:
+    - buildCommand: dotnet build
+    - testCommand: dotnet test
+    - projectKey: Ashimaru_karaoke
+    - projectName: karaoke
+    - sonarOrganisation: ashimaru
