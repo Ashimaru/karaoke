@@ -6,9 +6,9 @@ namespace BackendTest
     public class UnitTest1
     {
         [TestMethod]
-        public void ShouldReturnTest_whengetStringCalled()
+        public void ShouldReturnValidValue_whengetStringInvoked()
         {
-            Class1 c1 = new Class1();
+            var c1 = new Class1();
             Assert.AreEqual(c1.getString(), "Test");
         }
     }
