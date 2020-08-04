@@ -1,0 +1,13 @@
+﻿<Window x:Class="SingItBetter.UI.WPF.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SingItBetter.UI.WPF.Windows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="{Binding TestString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="TEST" Margin="100 100 100 100" Command="{Binding TestCommand}" CommandParameter="{Binding CurrentDateTimeString}"/>
+    </StackPanel>
+</Window>
