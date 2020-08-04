@@ -1,5 +1,6 @@
  name: dotnet-sonarscanner
  
+
  on:
   push:
     branches: [ master ]
@@ -12,10 +13,12 @@
   
  jobs:
   run:
-  uses: Secbyte/dotnet-sonarscanner@v2.3
-   with:
-    - buildCommand: dotnet build
-    - testCommand: dotnet test
-    - projectKey: Ashimaru_karaoke
-    - projectName: karaoke
-    - sonarOrganisation: ashimaru
+   steps:
+     - name: go
+       uses: uses: Secbyte/dotnet-sonarscanner@v2.3
+       with:
+        - buildCommand: dotnet build
+        - testCommand: dotnet test
+        - projectKey: Ashimaru_karaoke
+        - projectName: karaoke
+        - sonarOrganisation: ashimaru
