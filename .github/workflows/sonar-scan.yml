@@ -11,7 +11,7 @@
    runs-on: ubuntu-latest
    steps:
      - name: go
-       uses: Secbyte/dotnet-sonarscanner@v2.3
+       uses: Secbyte/dotnet-sonarscanner@v4.6
        with:
          buildCommand: dotnet build .
          testCommand: dotnet test .
