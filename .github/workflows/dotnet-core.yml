@@ -26,9 +26,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: SonarScanner
-      uses: sonarsource/sonarcloud-github-action@master
+      uses: Secbyte/dotnet-sonarscanner@v2.3
       with:
-        projectBaseDir: SingItBetter.Test
+        buildCommand: dotnet build SingItBetter.Test/
+        testCommand: dotnet test SingItBetter.Test/
+        projectKey: Ashimaru_karaoke
+        projectName: karaoke 
+        sonarOrganisation: ashimaru
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
